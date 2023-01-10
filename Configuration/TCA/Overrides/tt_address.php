@@ -42,7 +42,9 @@ if (!isset($GLOBALS['TCA']['tt_address']['ctrl']['type'])) {
 if (isset($GLOBALS['TCA']['tt_address']['types']['0']['showitem'])) {
     $GLOBALS['TCA']['tt_address']['types']['place']['showitem'] = '
         tx_extbase_type,
-        --palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_palette.organization;organization,
+        name,
+        company,
+        --palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_palette.building;building,
         image,
         description,
 
@@ -52,7 +54,6 @@ if (isset($GLOBALS['TCA']['tt_address']['types']['0']['showitem'])) {
 
         --div--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_tab.contact,
             --palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_palette.contact;contact,
-            --palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_palette.building;building,
             --palette--;LLL:EXT:tt_address/Resources/Private/Language/locallang_db.xlf:tt_address_palette.social;social,
 
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
