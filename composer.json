@@ -1,47 +1,46 @@
 {
     "name": "hauerheinrich/tt-address-places",
     "type": "typo3-cms-extension",
-    "description": "Wrapper for ***",
+    "description": "Simply adds places / companies TCA for EXT:tt_address.",
     "authors": [
         {
             "name": "Christian Hackl",
+            "email": "chackl@hauer-heinrich.de",
+            "homepage": "http://www.hauer-heinrich.de",
             "role": "Developer"
         }
     ],
-    "license": "GPL-2.0-or-later",
-    "require": {
-        "typo3/cms-core": "^10.4 || ^10.5",
-        "friendsoftypo3/tt-address": ""
+    "support": {
+        "issues": "https://github.com/Hauer-Heinrich/tt_address_places/issues",
+        "source": "https://github.com/Hauer-Heinrich/tt_address_places",
+        "docs": "https://github.com/Hauer-Heinrich/tt_address_places/blob/master/README.md"
     },
-    "require-dev": {
-        "typo3/testing-framework": "^6.8"
+    "funding": [
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.com/paypalme/hauerheinrich"
+        }
+    ],
+    "version": "1.0.0",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS", "address", "places", "companies", "Extension"],
+    "replace": {
+        "hauer-heinrich/tt_address_places": "self.version",
+        "typo3-ter/tt-address-places": "self.version"
+    },
+    "require": {
+        "typo3/cms-core": "^10.4.0 || ^11.5.0",
+        "friendsoftypo3/tt-address": ""
     },
     "autoload": {
         "psr-4": {
             "HauerHeinrich\\TtAddressPlaces\\": "Classes"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "HauerHeinrich\\TtAddressPlaces\\Tests\\": "Tests"
-        }
-    },
-    "replace": {
-        "typo3-ter/tt-address-places": "self.version"
-    },
-    "config": {
-        "vendor-dir": ".Build/vendor",
-        "bin-dir": ".Build/bin"
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
-        ]
-    },
     "extra": {
         "typo3/cms": {
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
-            "web-dir": ".Build/public",
+            "web-dir": ".Build/Web",
             "extension-key": "tt_address_places"
         }
     }

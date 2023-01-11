@@ -2,7 +2,7 @@
 
 $EM_CONF['tt_address_places'] = [
     'title' => 'Address places',
-    'description' => 'Wrapper for ***',
+    'description' => 'Simply adds places / companies TCA for EXT:tt_address.',
     'category' => 'plugin',
     'author' => 'Christian Hackl',
     'author_email' => 'web@hauer-heinrich.de',
